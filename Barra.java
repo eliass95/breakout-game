@@ -14,6 +14,16 @@ public class Barra extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        movement();
+    }
+    
+    public void movement() {
+        if(Greenfoot.isKeyDown("right")) {
+            this.setLocation(this.getX() + 10, this.getY());
+        }
+        
+        if(Greenfoot.isKeyDown("left")) {
+            this.setLocation(this.getX() - 10, this.getY());
+        }
+    }
 }
